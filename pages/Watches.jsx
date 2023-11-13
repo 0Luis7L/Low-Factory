@@ -12,12 +12,14 @@ export default function Watches () {
 
     const watchElements = watches.map(watch => (
         <div key={watch.id} className="van-tile">
+            <Link to={`/watches/${watch.id}`}>
             <img src={watch.imageUrl} />
             <div className="van-info">
                 <h3>{watch.name}</h3>
                 <p>${watch.price}<span>/week</span></p>
             </div>
             <i className={`van-type ${watch.type} selected`}>{watch.type}</i>
+            </Link>
         </div>
     ))
 

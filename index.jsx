@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Watches from "./pages/Watches";
+import WatchDetail from './pages/WatchDetail';
 
 import "./server"
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/watches" element={<Watches />}/>
+        <Route path="/watches/:id" element={<WatchDetail />}/>
       </Routes>
     </BrowserRouter>
   )
